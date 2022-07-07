@@ -1,7 +1,7 @@
 package router
 
 import (
-	"golang-learning/package_demo/demo1-gin/controller"
+	"golang-learning/frame_demo/demo1-gin/controller"
 	"net/http"
 
 	"github.com/gin-gonic/gin"

@@ -1,0 +1,5 @@
+database:
+  host: 127.70.56.141
+  user: root
+  dbname: test
+  pwd: 123456
