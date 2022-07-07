@@ -1,0 +1,4 @@
+2022-07-07T11:21:36.251+0800	DEBUG	zap_log/main.go:48	Trying to hit GET request for www.baidu.com
+2022-07-07T11:21:36.257+0800	ERROR	zap_log/main.go:51	Error fetching URL www.baidu.com : Error = Get "www.baidu.com": unsupported protocol scheme ""
+2022-07-07T11:21:36.257+0800	DEBUG	zap_log/main.go:48	Trying to hit GET request for http://www.baidu.com
+2022-07-07T11:21:36.317+0800	INFO	zap_log/main.go:53	Success! statusCode = 200 OK for URL http://www.baidu.com

@@ -35,7 +35,7 @@ func getEncoder() zapcore.Encoder {
 
 func getLogWriter() zapcore.WriteSyncer {
 	lumberJackLogger := &lumberjack.Logger{
-		Filename:   "./test.log",
+		Filename:   "./frame_demo/zap_log/test.log",
 		MaxSize:    1,
 		MaxBackups: 3,
 		MaxAge:     30,
