@@ -1,6 +1,7 @@
-# [BM19_findPeakElement](https://www.nowcoder.com/practice/fcf87540c4f347bcb4cf720b5b350c76?tpId=295&tqId=2227748&ru=%2Fpractice%2Ffcf87540c4f347bcb4cf720b5b350c76&qru=%2Fta%2Fformat-top101%2Fquestion-ranking&sourceUrl=%2Fexam%2Foj)
+# [162_findPeakElement](https://leetcode.cn/problems/find-peak-element/)
 可以采用分治的想法解决
 step 1：二分查找首先从数组首尾开始，每次取中间值，直到首尾相遇。
 step 2：如果中间值的元素大于它右边的元素，说明往右是向下，我们不一定会遇到波峰，但是那就往左收缩区间。
 step 3：如果中间值大于右边的元素，说明此时往右是向上，向上一定能有波峰，那我们往右收缩区间。
 step 4：最后区间收尾相遇的点一定就是波峰。
+1. 迭代爬坡
