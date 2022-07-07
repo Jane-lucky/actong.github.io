@@ -1,6 +1,6 @@
 package main
 
-import "cobraTest/cmd"
+import "golang-learning/package_demo/cobrademo/cmd"
 
 func main() {
 	cmd.Execute()
