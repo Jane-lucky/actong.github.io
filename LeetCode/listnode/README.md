@@ -1,4 +1,8 @@
-## [206_reverseList 反转链表](https://leetcode.cn/problems/UHnkqh/)
+链表一般操作时，一种常用的技巧是添加一个哑节点（dummy node），它的next 指针指向链表的头节点。这样一来，我们就不需要对头节点进行特殊的判断了。
+
+
+牛客 5 6 7
+# [206_reverseList 反转链表](https://leetcode.cn/problems/UHnkqh/)
 
 将链表进行反转，也就是遍历已经提供链表，对其进行头插法，实现链表的反转
 **头插法**
@@ -38,3 +42,16 @@ k组区间的遍历，通过递归的方式
 - k组进行反转
 - 采用两个临时指针节点（pre tail）
 - 将子链表的头部和上一个的尾部连接，实现链表的反转
+
+# [2413_getKthFromEnd  倒数最后k个节点](https://leetcode.cn/problems/lian-biao-zhong-dao-shu-di-kge-jie-dian-lcof/)
+1. 顺序遍历
+获取链表的总长度，然后顺序遍历链表的第n-k个节点返回
+2. 双指针
+将fast指针指向k+1个节点，第二个指针slow始终和fast相隔k，最终返回slow节点
+
+# [2487_removeNthFromEnd 删除倒数第n个节点](https://leetcode.cn/problems/SLwz0R/)
+1. 顺序遍历
+获取链表长度，遍历len-n删倒数第n个元素
+2. 栈
+元素依次进栈，弹出来的第n个节点，就是需要删除的节点
+3. 双指针

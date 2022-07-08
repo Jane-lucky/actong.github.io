@@ -18,12 +18,6 @@ func minCost1(costs [][]int) int {
 	return min(min(dp[0], dp[1]), dp[2])
 }
 
-func min(a, b int) int {
-	if a > b {
-		return b
-	}
-	return a
-}
 
 func minCost(costs [][]int) int {
 	dp := make([][3]int, len(costs))
