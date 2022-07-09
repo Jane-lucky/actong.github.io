@@ -1,5 +1,6 @@
 package listnode
 
+//迭代
 func mergeTwoLists(l1 *ListNode, l2 *ListNode) *ListNode {
 	if l1 == nil {
 		return l2
