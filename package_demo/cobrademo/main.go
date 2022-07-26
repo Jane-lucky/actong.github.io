@@ -1,7 +1,8 @@
 package main
 
-import "golang-learning/package_demo/cobrademo/cmd"
+import "golang-learning/package_demo/cobrademo/preandpost"
 
 func main() {
-	cmd.Execute()
+	preandpost.Execute()
+
 }
