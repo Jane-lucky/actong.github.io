@@ -82,3 +82,39 @@ word1转变成word2所需要的最少步骤：
 所有价值v[]
 
 dp[i][j]=max(dp[i-1][j],{四种情况产生的价值})
+
+## [HJ61_putApple 放苹果](https://www.nowcoder.com/practice/bfd8234bb5e84be0b493656e390bdebf?tpId=37&rp=1&ru=%2Fexam%2Foj%2Fta&qru=%2Fexam%2Foj%2Fta&sourceUrl=%2Fexam%2Foj%2Fta%3FtpId%3D37&difficulty=&judgeStatus=&tags=593&title=&gioEnter=menu)
+
+1. 递归的方式
+
+当n>m时:f(m,n)=f(m,m)
+
+当n<=m:
+
+- 至少有一个盘子没有放苹果：f(m,n)=f(m,n-1)
+- 盘子均放苹果：f(m,n)=f(m-n,n)
+
+那么,f(m,n)=f(m,n-1)+f(m-n,n)
+
+递归出口：
+
+当n=1时，所有苹果都必须放在一个盘子里，所以返回１；
+当没有苹果可放时，定义为１种放法；
+
+2. 动态规划
+dp[i][j]:第i个盘子放第j个苹果的方法
+dp[i][j]=dp[i][j-1]+dp[i-j][j]
+
+- 如果苹果数 < 盘子数，则表示有空盘，则忽略一个盘子，在n-1个放苹果，一直递推到n==1，有一种摆法
+- 如果苹果数 >= 盘子数，可以看作没有空盘
+- 则可以选择忽略一个盘子，如上边做法
+- 还可以选择每个盘子放一个苹果，即苹果数剩下i-j,继续递推直到j==1
+
+## [HJ91_plan 走方格方案](https://www.nowcoder.com/practice/e2a22f0305eb4f2f9846e7d644dba09b?tpId=37&rp=1&ru=%2Fexam%2Foj%2Fta&qru=%2Fexam%2Foj%2Fta&sourceUrl=%2Fexam%2Foj%2Fta%3FtpId%3D37&difficulty=&judgeStatus=&tags=593&title=&gioEnter=menu)
+
+n*m的棋盘格子，从左上角达到右下角的方案(只能向下或者向右走)
+
+dp[i][j]:表示从左上角出发，到达(i,j)的总方案路线
+
+边界赋值：当沿棋盘边界向右向左移动时，方案仅有1种，当向内部转移时：
+dp[i][j]=dp[i-1][j]+dp[i][j-1]
